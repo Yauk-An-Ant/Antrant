@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Ant Rant</title>
+        <link rel="shortcut icon" href="Images/favicon.ico"/>
+        <meta name="description" content="The Ant's blog and ranting space, come one come all to this waste of time!">
+        <meta name="author" content="An Ant"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <script defer src='app.js'></script>
+    </head>
+    <body class='dark'>
+        <header>
+            <div class='topbar'>
+                <a href="/login">Log In</a>
+                <li class='has-dropdown'>
+                    <a href="#" class='topbar'>Theme</a>
+                    <ul class='dropdown'>
+                        <a class='dropdown-item' id='light' href='#'>Light</a>                            
+                        <a class='dropdown-item' id='dark' href='#'>Dark</a>
+                    </ul>
+                </li>
+                <a href="/about">About</a>
+                <a href="/">Home</a>
+            </div>
+            <h1 style='text-align: center; font-family: Helvetica, sans-serif; margin-top: 100px;'>Register</h1>
+        </header>
+        <main>
+            <form autocomplete='off' action='/signup' method='POST'>
+                <div class='form' id='reg'>
+                    <div>
+                        <p class='formfield'>Username:</p>
+                        <input type='text' name='username' placeholder="Enter a username" required>
+                    </div>
+                    <div>
+                        <p class='formfield'>Email:</p>
+                        <input type='email' name='email' placeholder='Enter an email'  required>
+                    </div>
+                    <div>
+                        <p class='formfield'>Password:</p>
+                        <input type='password' id='pwd' name='pwd' placeholder='Create password' required>
+                        <div style='width: 75%; display: block; margin: -10px 0px auto;'>
+                            <i id='show'>Show</i>
+                        </div>
+                    </div>
+                    <div id='strength'>
+                        <span class='bar'></span>
+                    </div>
+                    <div class='validationlist'>
+                        <ul>
+                            <li id='1'>Has at least 5 characters</li>
+                            <li id='2'>Contains at least 1 capital letter</li>
+                            <li id='3'>Contains at least 1 number</li>
+                            <li id='4'>Contains at least 1 symbol</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button class='button' id='registerbutton' type='submit'>Sign Up</button>
+                    </div>  
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
